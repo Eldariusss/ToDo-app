@@ -24,6 +24,30 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 Шаг 2: Установка зависимостей
 -npm install
 
+Шаг 3: Настройка Firebase
+
+-Создайте новый проект в Firebase Console.
+
+-Активируйте Authentication и включите метод входа "Email/Password".
+
+-Скопируйте конфигурацию Firebase (объект firebaseConfig) из консоли.
+
+-Создайте файл firebase.js в папке src и вставьте следующий код:
+mport { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+
+const firebaseConfig = {
+  apiKey: i"<Ваш API ключ>",
+  authDomain: "<Ваш authDomain>",
+  projectId: "<Ваш projectId>",
+  storageBucket: "<Ваш storageBucket>",
+  messagingSenderId: "<Ваш messagingSenderId>",
+  appId: "<Ваш appId>"
+};
+
+const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);
+
 Шаг 4: Запуск приложения:
 -npm run dev
 Приложение будет доступно по адресу: http://localhost:3000. Старница авторизации по адресу http://localhost:3000/auth
