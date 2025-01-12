@@ -12,8 +12,6 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 -React: Фреймворк для построения пользовательского интерфейса.
 
--Redux Toolkit: Управление состоянием приложения.
-
 -Firebase: Регистрация, авторизация и базовые настройки бэкенда.
 
 -SCSS: Стилизация приложения.
